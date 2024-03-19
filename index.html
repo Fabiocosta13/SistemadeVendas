@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabela de Vendas</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Tabela de Vendas</h1>
+  <div id="table-container">
+    <table id="sales-table">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Quantidade</th>
+          <th>Preço Unitário (R$)</th>
+          <th>Total (R$)</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody id="sales-body">
+        <!-- As linhas da tabela de vendas serão adicionadas aqui dinamicamente -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3"><strong>Total Geral:</strong></td>
+          <td id="total" colspan="2">0,00</td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  <form id="add-sale-form">
+    <input type="text" id="product" placeholder="Nome do Produto" required>
+    <input type="number" id="quantity" placeholder="Quantidade" min="1" required>
+    <input type="number" id="unit-price" placeholder="Preço Unitário" min="0.01" step="0.01" required>
+    <button type="submit">Adicionar Venda</button>
+  </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
